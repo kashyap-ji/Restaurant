@@ -20,6 +20,10 @@ app.use("/api/reservation",reservationRouter)
 
 dbConnection();
 
+app.get("/", (req, res) => {
+    res.send("Hello, world!");
+});
+
 app.use(errorMiddleware)
 
 export default app;
